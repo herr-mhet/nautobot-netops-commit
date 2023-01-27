@@ -3,7 +3,7 @@ name = "nautobot-netops-commit"
 version = "0.1.0"
 description = "Provides commit capabilities for SSoT automation"
 authors = ["Alexander Herr"]
-license = "GPLv4"
+license = "GPLv3"
 readme = "README.md"
 packages = [{include = "nautobot_netops_commit"}]
 
