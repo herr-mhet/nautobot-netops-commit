@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Commits</h2>
+
+{% for commit in changes %}
+<p>{{ commit }}</p>
+{% endfor %}
+
+{% endblock %}

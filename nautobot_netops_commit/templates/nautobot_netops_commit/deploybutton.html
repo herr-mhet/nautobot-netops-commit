@@ -1,0 +1,8 @@
+<form action="/plugins/netops_commit/changes/" method="post" enctype="multipart/form-data" style="display:inline-block;">
+    {% csrf_token %}
+    {{ form }}
+    <button id="netops-commit-deploy-button" type="submit" class="btn btn-info">
+        <span class="mdi mdi-rotate-right" aria-hidden="true"></span>
+        Commit &#38; Deploy
+    </button>
+</form>
