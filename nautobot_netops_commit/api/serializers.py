@@ -8,4 +8,4 @@ class CommitSerializer(ValidatedModelSerializer):
 
     class Meta:
         model = Commit
-        fields = ('user','timestamp')
+        fields = ("user", "timestamp")

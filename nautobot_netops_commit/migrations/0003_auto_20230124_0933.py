@@ -7,23 +7,27 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('nautobot_netops_commit', '0002_commit_user'),
+        ("nautobot_netops_commit", "0002_commit_user"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='commit',
-            name='_custom_field_data',
-            field=models.JSONField(blank=True, default=dict, encoder=django.core.serializers.json.DjangoJSONEncoder),
+            model_name="commit",
+            name="_custom_field_data",
+            field=models.JSONField(
+                blank=True,
+                default=dict,
+                encoder=django.core.serializers.json.DjangoJSONEncoder,
+            ),
         ),
         migrations.AddField(
-            model_name='commit',
-            name='created',
+            model_name="commit",
+            name="created",
             field=models.DateField(auto_now_add=True, null=True),
         ),
         migrations.AddField(
-            model_name='commit',
-            name='last_updated',
+            model_name="commit",
+            name="last_updated",
             field=models.DateTimeField(auto_now=True, null=True),
         ),
     ]

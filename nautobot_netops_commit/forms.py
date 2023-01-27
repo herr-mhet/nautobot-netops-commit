@@ -8,6 +8,7 @@ from nautobot.utilities.forms import (
 )
 from nautobot.dcim.models import DeviceRole
 
+
 class NetopsCommitConfigurationForm(BootstrapMixin, forms.Form):
     """plugin-specific configuration"""
 
@@ -16,6 +17,6 @@ class NetopsCommitConfigurationForm(BootstrapMixin, forms.Form):
         help_text="Device role to collect commits for",
     )
 
+
 class NetopsCommitDeployChangeForm(BootstrapMixin, forms.Form):
     device = forms.UUIDField(widget=forms.HiddenInput())
-
