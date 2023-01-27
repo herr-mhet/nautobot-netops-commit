@@ -1,13 +1,19 @@
 """nautobot_netops_commit Plugin Initilization."""
 
+from importlib import metadata
 from nautobot.extras.plugins import PluginConfig
 
+__version__ = metadata.version(__name__)
 
 class NautobotNetopsCommitConfig(PluginConfig):
     """Plugin configuration for the netops_commit plugin."""
 
     name = "nautobot_netops_commit"  # Raw plugin name; same as the plugin's source directory.
     verbose_name = "NetOps Commit"  # Human-friendly name for the plugin.
+    author = "Alexander Herr"
+    author_email = "herr@eth.mpg.de"
+    version = __version__
+    description = "Provides commit capabilities for SSoT automation"
     base_url = "netops_commit"  # (Optional) Base path to use for plugin URLs. Defaulting to app_name.
     required_settings = (
         []

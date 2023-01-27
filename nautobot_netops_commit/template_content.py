@@ -11,7 +11,7 @@ class DeployButton(TemplateExtension):
         dr_uid = uuid.UUID(
             settings.PLUGINS_CONFIG["nautobot_netops_commit"]["watched_device_role_uid"]
         )
-        if self.context["object"].device_role.id == dr_uid:
+        if self.context["request"].user.has_perms(["nautobot_netops_commit.add_commit"]) and self.context["object"].device_role.id == dr_uid:
             form = forms.NetopsCommitDeployChangeForm()
             form.fields["device"].initial = self.context["object"].id
             return self.render(
